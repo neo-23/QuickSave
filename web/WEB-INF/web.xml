@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1">
+    <!--servlet class-->     
+    <servlet>
+        <servlet-name>SignUpController</servlet-name>
+        <servlet-class>midAssign.controller.SignUpController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SignInController</servlet-name>
+        <servlet-class>midAssign.controller.SignInController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>HomeController</servlet-name>
+        <servlet-class>midAssign.controller.HomeController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ReCoverPasswordController</servlet-name>
+        <servlet-class>midAssign.controller.ReCoverPasswordController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SignOutController</servlet-name>
+        <servlet-class>midAssign.controller.SignOutController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SaveScheduleController</servlet-name>
+        <servlet-class>midAssign.controller.SaveScheduleController</servlet-class>
+    </servlet>    
+    <!-- end -->
+    <!-- servlet mapping -->  	
+    <servlet-mapping>
+        <servlet-name>SignUpController</servlet-name>
+        <url-pattern>/sign-up</url-pattern>
+    </servlet-mapping>    
+    <servlet-mapping>
+        <servlet-name>SignInController</servlet-name>
+        <url-pattern>/sign-in</url-pattern>
+    </servlet-mapping>      
+    <servlet-mapping>
+        <servlet-name>HomeController</servlet-name>
+        <url-pattern>/home</url-pattern>
+    </servlet-mapping>   
+    <servlet-mapping>
+        <servlet-name>ReCoverPasswordController</servlet-name>
+        <url-pattern>/recover</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SignOutController</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SaveScheduleController</servlet-name>
+        <url-pattern>/save-schedule</url-pattern>
+    </servlet-mapping>    
+    <!--end-->
+<welcome-file-list>      
+    <welcome-file>/WEB-INF/view/index.jsp</welcome-file> 
+</welcome-file-list>   	
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
