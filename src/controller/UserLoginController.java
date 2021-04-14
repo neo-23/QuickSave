@@ -11,18 +11,18 @@ import jakarta.servlet.http.HttpSession;
 
 import quickSave.model.*;
 
-public class UserController extends HttpServlet {
+public class UserLoginController extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
         String userSignInInfo = "User info for John Doe";
 
         session.setAttribute("userSignInInfo", userSignInInfo);
-        request.getRequestDispatcher("home").forward(request, response);
+        response.sendRedirect(request.getContextPath() +"/home");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("home").forward(request, response);
+        request.getRequestDispatcher("WEB-INF/view/login.jsp").forward(request, response);
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
