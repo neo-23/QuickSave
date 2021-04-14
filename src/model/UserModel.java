@@ -16,71 +16,72 @@ public class UserModel implements Serializable {
     public UserModel() {
     }
 
-    public void SetUserId(int UserId) {
-        this.userId = UserId;
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
-    public int GetUserId() {
+    public int getUserId() {
         return this.userId;
     }
 
-    public void SetUserEmail(String UserEmail) {
-        this.userEmail = UserEmail;
+    public void setUserEmail(String userEmail) {
+        this.userEmail = userEmail;
     }
 
-    public String GetUserEmail() {
+    public String getUserEmail() {
         return this.userEmail;
     }
 
-    public void SetUserReEmail(String UserReEmail) {
-        this.userReEmail = UserReEmail;
+    public void setUserReEmail(String userReEmail) {
+        this.userReEmail = userReEmail;
     }
 
-    public String GetUserReEmail() {
+    public String getUserReEmail() {
         return this.userReEmail;
     }
 
-    public void SetUserFirstName(String UserFirstName) {
-        this.userFirstName = UserFirstName;
+    public void setUserFirstName(String userFirstName) {
+        this.userFirstName = userFirstName;
     }
 
-    public String GetUserFirstName() {
+    public String getUserFirstName() {
         return this.userFirstName;
     }
 
-    public void SetUserLastName(String UserLastName) {
-        this.userLastName = UserLastName;
+    public void setUserLastName(String userLastName) {
+        this.userLastName = userLastName;
     }
 
-    public String GetUserLastName() {
+    public String getUserLastName() {
         return this.userLastName;
     }
 
-    public void SetUserPassword(String UserPassword) {
-        this.userPassword = UserPassword;
+    public void setUserPassword(String userPassword) {
+        this.userPassword = userPassword;
     }
 
-    public String GetUserPassword() {
+    public String getUserPassword() {
         return this.userPassword;
     }
 
-    public void SetUserRePassword(String UserRePassword) {
-        this.userRePassword = UserRePassword;
+    public void setUserRePassword(String userRePassword) {
+        this.userRePassword = userRePassword;
     }
 
-    public String GetUserRePassword() {
+    public String getUserRePassword() {
         return this.userRePassword;
     }
 
-    public boolean ValidateUserEmail() {
-        if (this.userEmail.isEmpty() || this.userReEmail.isEmpty() || !this.userEmail.equals(this.userReEmail)) {
+    public boolean validateUserEmail() {
+        if (this.userEmail.isEmpty() || this.userReEmail.isEmpty()
+                || !this.userEmail.equals(this.userReEmail)) {
             return false;
         } else {
             return true;
         }
     }
 
-    public boolean ValidateUserFirstName() {
+    public boolean validateUserFirstName() {
         if (this.userFirstName.isEmpty()) {
             return false;
         } else {
@@ -88,7 +89,7 @@ public class UserModel implements Serializable {
         }
     }
 
-    public boolean ValidateUserLastName() {
+    public boolean validateUserLastName() {
         if (this.userLastName.isEmpty()) {
             return false;
         } else {
@@ -96,19 +97,20 @@ public class UserModel implements Serializable {
         }
     }
 
-    public boolean ValidateUserPassword() {
-        if (this.userPassword.isEmpty() || this.userRePassword.isEmpty() || !this.userPassword.equals(this.userRePassword)) {
+    public boolean validateUserPassword() {
+        if (this.userPassword.isEmpty() || this.userRePassword.isEmpty()
+                || !this.userPassword.equals(this.userRePassword)) {
             return false;
         } else {
             return true;
         }
     }
 
-    public boolean CheckUserEmail() {
+    public boolean checkUserEmail() {
         return true;
     }
 
-    public String CheckUser() {
+    public String checkUser() {
         return "";
     }
 }

@@ -16,7 +16,7 @@
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">User Account</a>
                         <div class="dropdown-menu">
                             <a href="#" class="dropdown-item">Settings</a>
-                            <a href="#" class="dropdown-item">Logout</a>
+                            <a href="#" class="dropdown-item" onclick="logout()">Logout</a>
                         </div>
                     </div>
                 </div>
@@ -30,13 +30,20 @@
             <div class="col-md-3">
             </div>
             <div class="col-md-6">
+                <form action="home" method="post">
                 <div class="search">
-                    <input type="text" placeholder="Search">
+                    <input type="text" name="searchText" placeholder="Search here">
                     <button><i class="fa fa-search"></i></button>
                 </div>
+                </form>
             </div>
             <div class="col-md-3">
             </div>
         </div>
     </div>
 </div>
+<script>
+    function logout() {
+        window.location.href = "logout";
+    }
+</script>

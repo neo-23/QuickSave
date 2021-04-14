@@ -9,6 +9,7 @@
     <property name="model-directory" value="src/model" />	
     <property name="classes-directory" value="web/WEB-INF/classes" />
     <property name="view-directory" value="web/WEB-INF/view" />
+    <property name="lib-directory" value="web/WEB-INF/lib" />
     <property name="web-directory" value="web" />
     <property name="web-xml-file" value="web/WEB-INF/web.xml" />
     <property name="build-directory" value="build" />
@@ -23,6 +24,11 @@
             <include name="*.jar" />
         </fileset>
     </path>
+    <path id="flickr-api-classpath">
+        <fileset dir="${lib-directory}">
+            <include name="*.jar" />
+        </fileset>
+    </path>
 
     <tstamp prefix="build-info">
         <format property="current-date" pattern="d-MMMM-yyyy" locale="en" />
@@ -30,9 +36,13 @@
     </tstamp>	
 	
     <target name="compile">
-        <javac srcdir="${model-directory}" destdir="${classes-directory}"/>
+        <javac srcdir="${model-directory}" destdir="${classes-directory}">
+            <classpath refid="servlet-classpath"/>
+            <classpath refid="flickr-api-classpath"/>
+        </javac>
         <javac srcdir="${controller-directory}" destdir="${classes-directory}">
             <classpath refid="servlet-classpath"/>
+            <classpath refid="flickr-api-classpath"/>
         </javac>
     </target>
     <target name="jsp-copy" depends="compile">
