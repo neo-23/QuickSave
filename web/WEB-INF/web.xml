@@ -5,11 +5,19 @@
         <servlet-name>HomeController</servlet-name>
         <servlet-class>quickSave.controller.HomeController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>UserController</servlet-name>
+        <servlet-class>quickSave.controller.UserController</servlet-class>
+    </servlet>
     <!-- end -->
     <!-- servlet mapping -->
     <servlet-mapping>
         <servlet-name>HomeController</servlet-name>
         <url-pattern>/home</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UserController</servlet-name>
+        <url-pattern>/sign-in</url-pattern>
     </servlet-mapping>
     <!--end-->
     <welcome-file-list>

@@ -30,6 +30,7 @@
     </tstamp>	
 	
     <target name="compile">
+        <javac srcdir="${model-directory}" destdir="${classes-directory}"/>
         <javac srcdir="${controller-directory}" destdir="${classes-directory}">
             <classpath refid="servlet-classpath"/>
         </javac>
@@ -48,9 +49,12 @@
             <fileset dir="${web-directory}">
                 <include name="WEB-INF/view/*.jsp"/>
                 <include name="assets/css/*.css"/>
-                <include name="assets/images/*.jpg"/>
-                <include name="assets/images/*.png"/>
+                <include name="assets/images/*.*"/>
                 <include name="assets/js/*.js"/>
+                <include name="assets/lib/easing/*.*"/>
+                <include name="assets/lib/slick/fonts/*.*"/>
+                <include name="assets/lib/slick/*.*"/>
+                <include name="WEB-INF/lib/*.jar"/>
                 <exclude name="WEB-INF/web.xml" />
             </fileset>
             <manifest>

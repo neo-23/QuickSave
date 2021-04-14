@@ -13,7 +13,7 @@ public class HomeController extends HttpServlet {
             throws ServletException, IOException {
         HttpSession session = request.getSession();
 
-        if (session.getAttribute("userInfo") != null) {
+        if (session.getAttribute("userSignInInfo") != null) {
             request.getRequestDispatcher("WEB-INF/view/home.jsp").forward(request, response);
         } else {
             request.getRequestDispatcher("WEB-INF/view/index.jsp").forward(request, response);
