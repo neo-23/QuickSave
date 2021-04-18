@@ -13,7 +13,7 @@
                 </div>
                 <div class="navbar-nav ml-auto">
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">User Account</a>
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">${userSignInInfo}</a>
                         <div class="dropdown-menu">
                             <a href="#" class="dropdown-item">Settings</a>
                             <a href="#" class="dropdown-item" onclick="logout()">Logout</a>

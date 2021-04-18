@@ -15,7 +15,7 @@ public class UserLoginController extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
-        String userSignInInfo = "User info for John Doe";
+        String userSignInInfo = request.getParameter("userEmail").split("@")[0];
 
         session.setAttribute("userSignInInfo", userSignInInfo);
         response.sendRedirect(request.getContextPath() +"/home");
