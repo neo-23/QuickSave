@@ -18,9 +18,9 @@
                             </div>
                             <div class="product-price">
                                 <h3></h3>
-                                <a href="https://dl.dropboxusercontent.com/s/deroi5nwm6u7gdf/advice.png" class="btn dropbox-saver"></a>
+                                <a href="${photoUrl}" class="btn dropbox-saver"></a>
                                 <div class="g-savetodrive"
-                                     data-src="//farm66.staticflickr.com/65535/51122291939_bc487f22c8.jpg"
+                                     data-src="${photoUrl}"
                                      data-filename="My Statement.jpg"
                                      data-sitename="My Company Name">
                                 </div>
